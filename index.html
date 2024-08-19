@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signature App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex items-center justify-center h-screen bg-gray-100">
+    <div class="bg-white p-4 shadow-lg rounded-lg max-w-md w-full">
+        <h1 class="text-xl font-semibold text-center mb-4">Signature App</h1>
+
+        <!-- Signature Box -->
+        <div id="signature-box" class="border border-gray-300 rounded-lg h-64 w-full bg-white relative">
+            <canvas id="signature-canvas" class="absolute top-0 left-0"></canvas>
+        </div>
+
+        <!-- Controls -->
+        <div class="mt-4">
+            <!-- Color Picker -->
+            <label class="block mb-2 text-sm font-medium">Signature Color:</label>
+            <input type="color" id="color-picker" class="block w-full p-2 border rounded-lg mb-4">
+
+            <!-- Background Color Picker -->
+            <label class="block mb-2 text-sm font-medium">Background Color:</label>
+            <input type="color" id="bg-color-picker" class="block w-full p-2 border rounded-lg mb-4">
+
+            <!-- Font Size Picker -->
+            <label class="block mb-2 text-sm font-medium">Signature Font Size:</label>
+            <input type="range" id="font-size-picker" min="4" max="60" class="w-full mb-4" />
+
+            <!-- Buttons -->
+            <div class="flex justify-between">
+                <button id="clear-btn" class="bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600">Clear</button>
+                <button id="save-btn" class="bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600">Save & Download</button>
+                <button id="retrieve-btn" class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600">Retrieve</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
